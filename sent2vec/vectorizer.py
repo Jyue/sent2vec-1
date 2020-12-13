@@ -33,7 +33,7 @@ class Vectorizer:
         self.vectors = vectors
 
     def word2vec(self, words, pretrained_vectors_path, ensemble_method='average'):
-        model = gensim.models.KeyedVectors.load_word2vec_format(pretrained_vectors_path)
+        model = gensim.models.KeyedVectors.load(pretrained_vectors_path)
 
         vectors = []
         for element in words:
